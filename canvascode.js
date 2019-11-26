@@ -10,8 +10,8 @@ ctx.fillStyle = 'lightgreen';
 ctx.strokestyle = 'darkgreen';
 ctx.fillRect(0, 0, 10, 10);
 ctx.strokeRect(0, 0, 10, 10);
-ctx.fillRect(100, 100, 10, 10);
-ctx.strokeRect(100, 100, 10, 10);
+ctx.fillRect(gameCanvas.width-10, gameCanvas.height10-10, 10, 10);
+ctx.strokeRect(gameCanvas.width-10, gameCanvas.height10-10, 10, 10);
 //ctx.fillRect(snakePart.x, snakePart.y, 10, 10);
 //ctx.strokeRect(snakePart.x, snakePart.y, 10, 10);
 
