@@ -1,6 +1,6 @@
 var highscore = 0;
 (function() {
-  var SIZE = 500; //SIZE OF CANVAS
+  var SIZE = 400; //SIZE OF CANVAS
   var GRID_SIZE = SIZE / 50;
   var c = document.getElementById('c');
   c.height = c.width = SIZE;
@@ -38,7 +38,7 @@ var highscore = 0;
     //CHECKING IF SNAKE ATE CANDY
     if (candy && candy.x === newHead.x && candy.y === newHead.y) {
       candy = null;
-      snakeLength += 2;
+      snakeLength += 5;
       var currhs = document.getElementById('currscore');
       currhs.innerHTML = snakeLength;
     }
