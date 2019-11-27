@@ -1,4 +1,3 @@
-var highscore = 0;
 (function() {
   var SIZE = 400; //SIZE OF CANVAS
   var GRID_SIZE = SIZE / 50;
@@ -85,6 +84,14 @@ var highscore = 0;
   window.onload = function() {
     setInterval(tick, 100); //TIMER
     window.onkeydown = function(e) {
+      if (e.keyCode == 81) {
+            var a = confirm('Are you sure you want to quit?!?!?!?!');
+            if(a) end = 1;
+      }
+      if (e.keyCode == 80) {
+            alert('Game is paused. Press Enter to Resume');
+            end = 0;
+      }
       newDirection = {37: -1, 38: -2, 39: 1, 40: 2}[e.keyCode] || newDirection;
     };
   };
