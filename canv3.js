@@ -38,7 +38,9 @@ var highscore = 0;
     //CHECKING IF SNAKE ATE CANDY
     if (candy && candy.x === newHead.x && candy.y === newHead.y) {
       candy = null;
-      snakeLength += 10;
+      snakeLength += 5;
+      var currhs = document.getElementById('currscore');
+      currhs.innerHTML = snakeLength;
     }
 
     context.fillStyle = '#002b36';
@@ -48,7 +50,8 @@ var highscore = 0;
       context.font = '40px serif';
       context.textAlign = 'center';
       context.fillText('Refresh to Replay', SIZE / 2, SIZE / 2);
-      highscore = snakeLength;
+      var one = document.getElementById('one');
+      one.innerHTML = "&nbsp&nbsp"+snakeLength;
     } else {
       snake.unshift(newHead); //ADDING A NEW HEAD
       snake = snake.slice(0, snakeLength); //MAKING SURE SNAKE IS SNAKE NOT MORE SNAKE
