@@ -20,46 +20,45 @@
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav mr-auto"></div>
         <div class="navbar-nav">
-        <a class="nav-link" href="#" value="Refresh Page" onClick="window.location.reload();">New Game<span class="sr-only">(current)</span></a>
-        <a class="nav-link" href="#">Play/Pause</a>
-        <a class="nav-link" href="#">Instructions</a>
-        <a class="nav-link" href="#">Similiar Games</a>
-        <a class="nav-link" href="#">Support</a>
+        <a class="nav-link" href="http://localhost:8080/web-tech/homepage2.html" value="Refresh Page" onClick="window.location.reload();">New Game<span class="sr-only">(current)</span></a>
+        <!--a class="nav-link" href="#">Play/Pause</a-->
+        <a class="nav-link" href="instructions.html">Instructions</a>
+        <a class="nav-link" target = "_blank" href="https://www.google.com/search?q=snake+like+games&oq=snake+like+games&aqs=chrome..69i57j0l4j69i60.2586j1j9&sourceid=chrome&ie=UTF-8">Similiar Games</a>
+        <a class="nav-link" href="mailto:srujan.deshpande@gmail.com">Support</a>
     </div>
 
   </div>
 </nav>
 </header>
 <main>
-<div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
+  <div id="gamearea" style="float:left">
+    <canvas id="c" width="400" height="400" backgroundcolor="blue">
+    </canvas>
+  </div>
+  <div id="scoreboard"  style="float:left;">
+    <h5>&nbsp&nbspHIGHSCORES</h5>
+      <b id="one"></b>
+    <h5>&nbsp&nbspCURRENT SCORE:</h5>
+    <h5 id = "currscore">5</h5>
+    <button id="startgame">End Game</button>
+  <a href="http://localhost:8080/web-tech/homepage2.html">Start Game</a><br>
+  <button id="endgame">End Game</button>
+  </div>
 
 
-  <div class="carousel-inner" >
-    <div id="gamearea" style="float:left;">
-      <canvas id="c" width="400" height="400" backgroundcolor="blue">
-      </canvas>
+  <br>
+  <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="snake.jpg"  height="250" width="100" class="d-block w-100" alt="First slide">
     </div>
-    <div class="carousel-item active" style="float:left">
-      <img src="snake.jpg"  height="400" width="100" class="d-block w-100" alt="First slide">
+    <div class="carousel-item">
+      <img src="snake1.jpg"  height="250" width="100" class="d-block w-100" alt="Second slide">
     </div>
-    <div class="carousel-item"style="float:left" >
-      <img src="snake1.jpg"  height="400" width="100" class="d-block w-100" alt="Second slide">
-    </div>
-    <div class="carousel-item"style="float:left" >
-      <img src="snake2.jpg"  height="400" width="100" class="d-block w-100" alt="Third slide">
+    <div class="carousel-item">
+      <img src="snake2.jpg"  height="250" width="100" class="d-block w-100" alt="Third slide">
     </div>
       </div>
-
-  <div id="scoreboard"  style="float:center;">
-    <h5>&nbsp&nbspHIGHSCORES</h5>
-    <ol>
-      <li id="one"></li>
-      <li id="two"></li>
-      <li id="three"></li>
-    </ol>
-    <h5>&nbsp&nbspCURRENT SCORE:</h5>
-    <h5 id = "currscore">0</h5>
-  </div>
 
   <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
