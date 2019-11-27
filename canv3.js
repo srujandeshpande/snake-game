@@ -38,7 +38,7 @@ var highscore = 0;
     //CHECKING IF SNAKE ATE CANDY
     if (candy && candy.x === newHead.x && candy.y === newHead.y) {
       candy = null;
-      snakeLength += 5;
+      snakeLength += 2;
       var currhs = document.getElementById('currscore');
       currhs.innerHTML = snakeLength;
     }
